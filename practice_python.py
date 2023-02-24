@@ -1,5 +1,10 @@
-print("Hello world")
-print("bye")
-print("Kaise ho")
-print("myname is")
+#print star
+
+num=4
+
+for i in range(num):
+    for j in range(i):
+        print("*",end="")
+    print()
+#reverse string
 
