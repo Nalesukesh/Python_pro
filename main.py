@@ -4,6 +4,7 @@ from colorama import Fore
 import pytest
 
 
+
 server = 'PC-PC'
 database = 'Automation'
 driver = 'ODBC driver 17 for SQL Server'
@@ -11,8 +12,9 @@ database_con = f'mssql://@{server}/{database}?driver={driver}'
 engine = create_engine(database_con)
 connection = engine.connect()
 
-path = r"C:\Users\nales\OneDrive\Desktop\Test_Case_Evidence.xlsx"
-writer = pd.ExcelWriter(path, engine='xlsxwriter')
+# path = r"C:\Users\nales\OneDrive\Desktop\Test_Case_Evidence.xlsx"
+# writer = pd.ExcelWriter(path, engine='xlsxwriter')
+writer=pd.ExcelWriter(r"C:\Users\nales\OneDrive\Desktop\Test_Case_Evidence.xlsx")
 
 src_df = pd.read_sql_query('select * from emp;', connection)
 tgt_df = pd.read_sql_query('select * from emp;', connection)
